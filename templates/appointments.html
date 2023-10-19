@@ -1,3 +1,5 @@
-{% extends 'base.html' %} {% for appointments in user.appointment_set.all %}
+{% extends 'base.html' %} {% block content %} {% load crispy_forms_tags %}
 <h2>{{ Appointment }}</h2>
-{% endfor %}
+
+<h1>Hello</h1>
+{% endblock %}
