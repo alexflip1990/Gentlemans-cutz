@@ -35,7 +35,7 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="#">Gentlemans-Cutz</a>
         <button
@@ -59,10 +59,10 @@
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link" href="{% url 'appointments' %}">Appointments</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'appointments' %}">Appointments</a>
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
             <li class="nav-item">
@@ -79,7 +79,8 @@
     <!--/ Navigation-->
     
     <!-- Main section-->
-    <main class="main" id="main-content">
+
+    <main class="main" id="main-content" style="background-image: url('{% static 'images/main-image.jpg' %}')";>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -95,6 +96,20 @@
     <!--/ Main section-->
 
     <!-- Footer -->
-    <footer></footer>
+        <footer class="footer mt-auto py-3 dark-bg">
+            <p class="m-0 text-center text-white">Create by Alex Flipping</p>
+            <p class="m-0 text-center text-white">Follow me: 
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook-square ms-3"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square ms-3"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram-square ms-3"></i></a>
+            </p>
+        </footer>
+        <script>
+            setTimeout(function () {
+                let messages = document.getElementById('msg');
+                let alert = new bootstrap.Alert(messages);
+                alert.close();
+            }, 2500);
+        </script>
   </body>
 </html>
