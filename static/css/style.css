@@ -1,0 +1,30 @@
+body {
+    font-family: "Inter", 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    background-color: darkslategray;
+}
+
+h1 {
+    font-family: "Dela Gothic one", sans-serif;
+    color: white;
+}
+
+img {}
+
+main {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/* Navigation */
+.navbar .navbar-nav .nav-link.active {
+    color: darkslategrey;
+}
+
+/* Main section */
+#main-content {
+    background: linear-gradient(background-color: lightslategray);
+    /*image goes in here*/
+    min-height: 100vh;
+
+}
