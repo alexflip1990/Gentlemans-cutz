@@ -22,11 +22,27 @@ body {
 
 /* Main section */
 #main-content {
-    background-image: url(../images/main-image.jpg);
+    background-image: 
+        linear-gradient(to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.0)),
+        url(../images/main-image.jpg);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
 }
+
+/* #main-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    width: 100;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+    z-index: 1;
+} */
 
 .btn {
     background-color: darkslategray;

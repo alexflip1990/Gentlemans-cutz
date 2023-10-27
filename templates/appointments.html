@@ -3,6 +3,61 @@
 {% block content %} 
 {% load crispy_forms_tags %}
 
+<!-- Form -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <span class="anchor" id="formComplex"></span>
+            <div id="appointmetForm">
+                <h1>Appointment Form</h1>
+                <p>Book a appointment with us and enjoy the Gentlemans-Cutz experience</p>
+            </div>
+            <hr class="my-5">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-row mt-4">
+                    <div class="col-sm-6 pb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" required="true">
+                    </div>
+                    <div class="col-sm-3 pb-3">
+                        <label for="service">Services</label>
+                        <select class="form-control" id="service" name="service">
+                            <option value="Classic Cut">Classic Cut </option>
+                            <option value="Cut & Beard">Cut & Beard</option>
+                            <option value="Skin Fade">Skin Fade</option>
+                            <option value="Skin & Beard">Skin & Beard</option>
+                            <option value="Buzz Cut">Buzz Cut</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 pb-3">
+                        <label for="myDate">Date</label>
+                        <input required="true" type="text" class="form-control" name="myDate" id="myDate"
+                            placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="col-sm-3 pb-3">
+                        <label for="time">Time</label>
+                        <select class="form-control" id="time" name="time">
+                            <option value="9am">9am</option>
+                            <option value="10am">10am</option>
+                            <option value="11am">11am</option>
+                            <option value="1pm">1pm</option>
+                            <option value="2pm">2pm</option>
+                            <option value="3pm">3pm</option>
+                            <option value="4pm">4pm</option>
+                            <option value="5pm">5pm</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 pb-3 pt-5">
+                        <button type="submit" name="submit" class="btn btn-block"
+                            id="submit-form">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
