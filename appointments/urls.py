@@ -1,9 +1,10 @@
 from . import views
 from django.urls import path
+from appointments.views import AppointmentCreate
 
 urlpatterns = [
     path('appointments', views.AppointmentCreate.as_view(),
-         name='appointments'),
+         name='appointment'),
 ]
 # create ApointmentCreateView, referring to PostDetail url below
 

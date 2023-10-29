@@ -7,13 +7,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 offset-md-1">
-            <span class="anchor" id="formComplex"></span>
             <div id="appointmetForm">
                 <h1>Appointment Form</h1>
                 <p>Book a appointment with us and enjoy the Gentlemans-Cutz experience</p>
             </div>
             <hr class="my-5">
-            <form method="POST">
+            <form action="{% url 'appointments' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-row mt-4">
                     <div class="col-sm-6 pb-3">
