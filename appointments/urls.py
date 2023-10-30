@@ -3,8 +3,7 @@ from django.urls import path
 from appointments.views import AppointmentCreate
 
 urlpatterns = [
-    path('appointments', views.AppointmentCreate.as_view(),
-         name='appointment'),
+    path('add_appointment/', views.add_appointment, name='example-url'),
 ]
 # create ApointmentCreateView, referring to PostDetail url below
 
