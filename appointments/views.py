@@ -7,7 +7,6 @@ from .forms import AppointmentForm
 from django.contrib import messages
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from .models import Appointment
 
 
 # Function that allows user to view homepage
@@ -24,7 +23,7 @@ def blog(request):
 
 # Function that allows the user to view appointment page
 # GET
-def appointment(request): 
+def appointments(request):
     return render(request, 'gentlemanscutz/appointments.html')
 
 
