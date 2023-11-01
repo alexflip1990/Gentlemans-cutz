@@ -3,28 +3,25 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container-fluid edit-container">
-    <div class="row text-center">
-        <div class="col-12">
-            <h1 class="mt-3">Amend your Workshop Booking</h1>
-        </div>
-    </div>
+
+<div class="container">
     <div class="row">
-        <div class="col-8 offset-2">
-            <h4 class="text-center"><strong>Booking as: {{ user.username }}</strong></h4>
-            {{ booking_form.media }}
-            <form method="POST" class="contact-form mx-auto">
+        <div class="col-md-10 offset-md-1">
+            <div id="appointmetForm">
+                <h1>Appointment Form</h1>
+                <p>Please complete the form to amend your appointment</p>
+            </div>
+            <hr class="my-5">
+            <form method="POST">
                 {% csrf_token %}
-                {{ form | crispy }}
-                <div class="row text-center">
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-lg btn-dark my-3">Save Changes</button>
+                {{form|crispy}}
+                <div class="form-row mt-4">
+                    <div class="col-md-6 pb-3 pt-5">
+                        <button type="submit" name="edit" class="btn btn-block" id="edit-form">Edit Appointment</button>
                     </div>
                 </div>
             </form>
-            <div class="text-center">
-                <a href="{% url 'profile-page' %}" class="btn btn-lg btn-dark my-3">Go Back</a>
-            </div>
+
         </div>
     </div>
 </div>

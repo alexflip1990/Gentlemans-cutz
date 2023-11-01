@@ -38,12 +38,10 @@ def add_appointment(request):
             appointment.user = request.user
             appointment.save()
             messages.success(request, 'Appointment booked!.')
-            return redirect('edit_appointment')
+            return redirect('view_appointment')
 
     form = AppointmentForm()
     context = {
         'form': form
     }
     return render(request, 'gentlemanscutz/appointments.html', context)
-
-
