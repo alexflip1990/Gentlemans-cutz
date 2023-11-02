@@ -7,6 +7,7 @@ from .forms import AppointmentForm
 from django.contrib import messages
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 # Function that allows user to view homepage
@@ -44,7 +45,7 @@ def add_appointment(request):
     context = {
         'form': form
     }
-    return render(request, 'gentlemanscutz/appointments.html', context)
+    return render(request, 'appointments/appointments.html', context)
 
 
 # Function that lets the user view their appointment
@@ -54,4 +55,33 @@ def view_appointment(request):
     context = {
         'appointment': appointment
     }
-    return render(request, 'gentlemanscutz/view_appointment.html', context)
+    return render(request, 'appointments/view_appointment.html', context)
+
+
+# Function that lets the user edit their appointment once it's been made
+@login_required
+def edit_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id)
+    if request.method == "POST":
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            appointment = form.save()
+            appointment.user = request.user
+            appointment.save()
+            messages.success(request, 'Your appointment has been amended.')
+        return redirect('view_appointment')
+    form = AppointmentForm(instance=appointment)
+    context = {
+        'form': form
+    }
+    return render(request, 'appointment/edit_appointment.html', context)
+
+
+# Function that lets the user delete their appointment 
+@login_required
+def delete_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id)
+    if request.method == 'POST':
+        appointment.delete()
+        messages.success(request, 'Your appointment has been deleted.')
+        return redirect('add_appointment')
