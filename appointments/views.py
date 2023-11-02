@@ -27,8 +27,8 @@ def appointments(request):
     return render(request, 'gentlemanscutz/appointments.html')
 
 
-# Function that allows user to make an appointment which
-# then adds it to the database
+# Function that allows the user to make an appointment which
+# will then add it to the database
 @ login_required
 def add_appointment(request):
     if request.method == 'POST':
@@ -45,3 +45,13 @@ def add_appointment(request):
         'form': form
     }
     return render(request, 'gentlemanscutz/appointments.html', context)
+
+
+# Function that lets the user view their appointment
+@login_required
+def view_appointment(request):
+    appointment = Appointment.objects.filter(user=request.user)
+    context = {
+        'appointment': appointment
+    }
+    return render(request, 'gentlemanscutz/view_appointment.html', context)

@@ -1,6 +1,7 @@
 # admin.py in the same app where your models.py is located
 
 # Importing necessary modules from Django's admin and the model you've created.
+from django.contrib.admin import ModelAdmin
 from django.contrib import admin
 from .models import Appointment
 
