@@ -55,24 +55,30 @@ def delete(request):
 def add_appointment(request):
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
+        print("POST Request")
         if form.is_valid():
+            print("Form is valid")
             appointment = form.save(commit=False)
             appointment.user = request.user
-            appointment_time = appointment.appointment_time
-            appointment_day = appointment.appointment_day
-            exist_appointment = Appointment.objects.filter(appointment_time=appointment_time, appointment_date=appointment_day).first()
+            appointment_time = appointment.time
+            appointment_day = appointment.day
+            exist_appointment = Appointment.objects.filter(time=appointment_time, day=appointment_day).first()
+
             if exist_appointment:
                 messages.error(request, 'An appointment has already been made for this time and date')
             else:
                 appointment.save()
                 messages.success(request, 'Appointment booked!.')
                 return redirect('view_appointment')
+        else:
+            print("Form is not valid")
+            print(form.errors)
     else:
         form = AppointmentForm()
         context = {
             'form': form
         }
-    return render(request, '/appointments.html', context)
+    return render(request, 'appointments.html', context)
 
 
 # Function that lets the user view their appointment
@@ -82,7 +88,7 @@ def view_appointment(request):
     context = {
         'appointment': appointment
     }
-    return render(request, '/view_appointment.html', context)
+    return render(request, 'view_appointment.html', context)
 
 
 # Function that lets the user edit their appointment once it's been made
@@ -101,7 +107,7 @@ def edit_appointment(request, appointment_id):
     context = {
         'form': form
     }
-    return render(request, '/edit_appointment.html', context)
+    return render(request, 'edit_appointment.html', context)
 
 
 # Function that lets the user delete their appointment

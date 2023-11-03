@@ -12,9 +12,10 @@
                 <p>Book a appointment with us and enjoy the Gentlemans-Cutz experience</p>
             </div>
             <hr class="my-5">
-            <form action="{% url 'appointments' %}" method="POST">
+            <!-- <form action="{% url 'view_appointment' %}" method="POST"> -->
+            <form action="{% url 'add_appointment' %}" method="POST">
                 {% csrf_token %}
-                <div class="form-row mt-4">
+                <!-- <div class="form-row mt-4">
                     <div class="col-sm-6 pb-3">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" id="name" required="true">
@@ -46,7 +47,8 @@
                             <option value="4pm">4pm</option>
                             <option value="5pm">5pm</option>
                         </select>
-                    </div>
+                    </div> -->
+                    {{form.as_p}}
                     <div class="col-md-6 pb-3 pt-5">
                         <button type="submit" name="submit" class="btn btn-block"
                             id="submit-form">Submit</button>
