@@ -8,44 +8,71 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.db import models
 
 
 # Function that allows user to view homepage
 # GET
 def home(request):
-    return render(request, 'gentlemanscutz/base.html')
+    return render(request, 'appointments/base.html')
 
 
 # Function that allows the user to view blog page
 # GET
 def blog(request):
-    return render(request, 'gentlemanscutz/blog.html')
+    return render(request, 'blog/blog.html')
 
 
 # Function that allows the user to view appointment page
 # GET
 def appointments(request):
-    return render(request, 'gentlemanscutz/appointments.html')
+    return render(request, 'appointments.html')
+
+
+# Function that allows the user to view view_appointment page
+# GET
+def view(request):
+    return render(request, 'view_appointment.html')
+
+
+# Function that allows the user to view edit_appointment page
+# GET
+def edit(request):
+    return render(request, 'edit_appointment.html')
+
+
+# Function that allows the user to view delete_appointment page
+# GET
+def delete(request):
+    return render(request, 'delete_appointment.html')
 
 
 # Function that allows the user to make an appointment which
-# will then add it to the database
+# will check if an appointment for that date and time already exists
+# if so an error message is thrown, if not the appointment is saved to
+# the database
 @ login_required
 def add_appointment(request):
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
         if form.is_valid():
-            appointment = form.save()
+            appointment = form.save(commit=False)
             appointment.user = request.user
-            appointment.save()
-            messages.success(request, 'Appointment booked!.')
-            return redirect('view_appointment')
-
-    form = AppointmentForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'appointments/appointments.html', context)
+            appointment_time = appointment.appointment_time
+            appointment_day = appointment.appointment_day
+            exist_appointment = Appointment.objects.filter(appointment_time=appointment_time, appointment_date=appointment_day).first()
+            if exist_appointment:
+                messages.error(request, 'An appointment has already been made for this time and date')
+            else:
+                appointment.save()
+                messages.success(request, 'Appointment booked!.')
+                return redirect('view_appointment')
+    else:
+        form = AppointmentForm()
+        context = {
+            'form': form
+        }
+    return render(request, '/appointments.html', context)
 
 
 # Function that lets the user view their appointment
@@ -55,7 +82,7 @@ def view_appointment(request):
     context = {
         'appointment': appointment
     }
-    return render(request, 'appointments/view_appointment.html', context)
+    return render(request, '/view_appointment.html', context)
 
 
 # Function that lets the user edit their appointment once it's been made
@@ -74,10 +101,10 @@ def edit_appointment(request, appointment_id):
     context = {
         'form': form
     }
-    return render(request, 'appointment/edit_appointment.html', context)
+    return render(request, '/edit_appointment.html', context)
 
 
-# Function that lets the user delete their appointment 
+# Function that lets the user delete their appointment
 @login_required
 def delete_appointment(request, appointment_id):
     appointment = get_object_or_404(Appointment, id=appointment_id)
