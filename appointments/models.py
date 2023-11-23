@@ -30,7 +30,7 @@ class Appointment(models.Model):
         User, on_delete=models.CASCADE)
     service = models.CharField(
         max_length=50, choices=SERVICE_CHOICES, default="Classic Cut")
-    day = models.DateField(default=datetime.now)
+    date = models.DateField(default=datetime.now)
     time = models.CharField(
         max_length=10, choices=TIME_CHOICES, default="9 AM")
     time_ordered = models.DateTimeField(default=datetime.now, blank=True)

@@ -9,3 +9,4 @@ urlpatterns = [
     path('edit/<appointment_id>', views.edit_appointment, name='edit_appointment'),
     path('delete/<appointment_id>', views.delete_appointment, name='delete_appointment'),
 ]
+

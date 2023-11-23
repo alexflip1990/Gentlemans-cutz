@@ -15,7 +15,7 @@
             <!-- <form action="{% url 'view_appointment' %}" method="POST"> -->
             <form action="{% url 'add_appointment' %}" method="POST">
                 {% csrf_token %}
-                <!-- <div class="form-row mt-4">
+                <div class="form-row mt-4">
                     <div class="col-sm-6 pb-3">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" id="name" required="true">
@@ -38,17 +38,17 @@
                     <div class="col-sm-3 pb-3">
                         <label for="time">Time</label>
                         <select class="form-control" id="time" name="time">
-                            <option value="9am">9am</option>
-                            <option value="10am">10am</option>
-                            <option value="11am">11am</option>
-                            <option value="1pm">1pm</option>
-                            <option value="2pm">2pm</option>
-                            <option value="3pm">3pm</option>
-                            <option value="4pm">4pm</option>
-                            <option value="5pm">5pm</option>
+                            <option value="9 AM">9 AM</option>
+                            <option value="10 AM">10 AM</option>
+                            <option value="11 AM">11 AM</option>
+                            <option value="1 PM">1 PM</option>
+                            <option value="2 PM">2 PM</option>
+                            <option value="3 PM">3 PM</option>
+                            <option value="4 PM">4 PM</option>
+                            <option value="5 PM">5 PM</option>
                         </select>
-                    </div> -->
-                    {{form.as_p}}
+                    </div>
+                    <!-- {{ form|crispy }} -->
                     <div class="col-md-6 pb-3 pt-5">
                         <button type="submit" name="submit" class="btn btn-block"
                             id="submit-form">Submit</button>

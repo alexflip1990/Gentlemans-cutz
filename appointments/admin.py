@@ -5,11 +5,11 @@ from .models import Appointment
 
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
- 
-    list_display = ('user', 'service', 'day', 'time', 'time_ordered')
 
-    list_filter = ('service', 'day', 'time')
+    list_display = ('user', 'service', 'date', 'time', 'time_ordered')
 
-    search_fields = ['user__username', 'service', 'day']
+    list_filter = ('service', 'date', 'time')
+
+    search_fields = ['user__username', 'service', 'date']
 
     ordering = ['-time_ordered']
