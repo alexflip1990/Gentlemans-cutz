@@ -8,11 +8,6 @@ body {
     background-color: darkslategray;
 }
 
-/* img {
-    width: 100%;
-    opacity: 0.5;
-} */
-
 /* Navigation */
 .navbar .navbar-nav .nav-link:hover {
     background-color: darkslategray;
@@ -32,18 +27,6 @@ body {
     background-size: cover;
 }
 
-/* #main-content::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 50%;
-    width: 100;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
-    z-index: 1;
-} */
-
 .btn {
     background-color: darkslategray;
     color: white;
@@ -58,6 +41,11 @@ body {
     padding-bottom: 150px;
 }
 
+.container-fluid {
+    color: white;
+    font-size: 18px;
+}
+
 h1 {
     font-family: "Dela Gothic one", sans-serif;
     color: white;
@@ -66,3 +54,4 @@ h1 {
 p {
     color: white;
 }
+

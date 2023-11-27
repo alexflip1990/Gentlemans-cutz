@@ -36,4 +36,4 @@ class Appointment(models.Model):
     time_ordered = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return f"{self.user} | day: {self.day} | time: {self.time}"
+        return f"{self.user} | day: {self.date} | time: {self.time}"

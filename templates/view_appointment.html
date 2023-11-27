@@ -15,21 +15,21 @@
             </tr>
         </thead>
         <tbody>
-            {% for appointment in appointments %}
+            {% for appointment in appointment %}
             <tr>
-                <th scope="row">1</th>
+                <th scope="row">1:</th>
                 <td>{{ appointment.user.username }}</td>
                 <td>{{ appointment.service }}</td>
                 <td>{{ appointment.date }}</td>
                 <td>{{ appointment.time }}</td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a class="btn btn-primary me-md-2" href="/edit/{{ appointment.id }}">Edit</a>
+                    <a class="btn btn-primary me-md-2" href="{% url 'edit_appointment' appointment.id %}">Edit</a>
                     </div>
                 </td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a class="btn btn-primary me-md-2" href="/delete/{{ appointment.id }}">Delete</a>
+                        <a class="btn btn-primary me-md-2" href="{% url 'delete_appointment' appointment.id %}">Delete</a>
                     </div>
                 </td>
             </tr>
