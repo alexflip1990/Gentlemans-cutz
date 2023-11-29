@@ -138,7 +138,7 @@ RESPONSIVE IMAGE GOES HERE
 ![Screen shot of pep8 validator](static/images/pep8-checker.png)
 
 - LIGHTHOUSE PERFORMANCE
-- IMAGE GOES HERE
+![Screen shot of lighthouse image](static/images/lighthouse-image.png)
 
 ## Testing user stories from User Experience
 
@@ -312,7 +312,7 @@ In the terminal of your new work space you will need to install the following.
 - Blog section and registration content came from Code Institutes 'I think therefore I blog' walkthrough this was used as a base for my project.
 - Additional content was created using Bootstrap to which I made some changes to the content that it supplies.
 - Fonts where taken from [google fonts](https://fonts.google.com/)
-- Images where take from [Unsplash](https://unsplash.com/s/photos/barber-shop)
+- Images where take from [Freep!k](https://www.freepik.com/free-photo/handsome-man-barber-shop-styling-hair_7435510.htm#query=barbershop&position=29&from_view=search&track=sph)
 - Icons were taken from [fontawesome](https://fontawesome.com/)
 
 ## Credits
