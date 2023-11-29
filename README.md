@@ -77,7 +77,7 @@ RESPONSIVE IMAGE GOES HERE
 
 - Gentlemans-Cutz website styling has been kept minimal this is so the user is not overwhelmed when viewing the website, upon arrival the user is greeted with a very simple home page  with the navigation bar displayed to the top right of the screen.
 
-HOME PAGE IMAGE GOES HERE
+![Screen shot of home page.](static/images/home-page.png)
 
 - The user is able to view the blog page from this window without having to sign up or log in however they will not be able to interact with the blog post until they register or log in
 
