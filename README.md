@@ -81,39 +81,44 @@ RESPONSIVE IMAGE GOES HERE
 
 - The user is able to view the blog page from this window without having to sign up or log in however they will not be able to interact with the blog post until they register or log in
 
- NONE REGISTERED USER BLOG PAGE IMAGE GOES HERE
+ ![Screen shot of non registered user blog page.](static/images/blog-page.png)
+ ![Screen shot of non registered user blog page comments.](static/images/visitor-blog-page.png)
 
 - If this is a first time user they can register to the website by clicking the register link in the navigation bar. They will be required to fill in the fields stated and then register to the website.
 
-REGISTER PAGE IMAGE GOES HERE
+![Screen shot of register page.](static/images/register-page.png)
 
 - If this is a returning user they can access their account by clicking on the login link in the navigation bar, they will be required to enter their username and password to log in.
 
-LOGIN IMAGE GOES HERE
+![Screen shot of login page.](static/images/login-page.png)
 
 - Once the user has created an account or logged in as a returning customer they will be redirected back to the homepage, the navigation bar now has an different feature called Appointments.
 
-LOGGED IN HOME PAGE GOES HERE
+![Screen shot of logged in home page.](static/images/logged-in-home-page.png)
 
 - If the user clicks the appointments link in the navigation bar they will be redirected to the appointments form where they will need to complete the following fields including their name, service they would like from clicking on the service which will provide a drop-down list of services available, they will need to enter the date they would like and select a time for their appointment, this works the same as the service options, clicking on the time will reveal a drop-down of times available. Note if the date and time has already been chosen by another user the form will reset, this is not a final feature I would like but due to time constraints I have not been able to implement this feature yet.
 
-APPOINTMENTS FORM PAGE GOES HERE
+![Screen shot of appointments page.](static/images/appointments-form.png)
 
 - Once the user has successfully submitted their form they will be redirected to view their appointment details where they will have the options to edit or delete their appointments.
 
-VIEW APPOINTMENTS FORM GOES HERE
+![Screen shot of view appointments page.](static/images/view-appointment.png)
 
 - If the user chooses to edit their appointment they will be redirected to this page where they are able to make changes to their appointment and resubmit the form. This will redirect them back to the view appointments page.
 
-EDIT APPOINTMENT GOES HERE
+![Screen shot of edit appointments page.](static/images/view-appointment.png)
 
 - If the user chooses to deleted their appointment they will be redirected to this page and asked if they would like to confirm deleting their appointment. If the user chooses to delete their appointment they will be redirected back to the appointments form page.
 
-DELETE APPOINTMENT GOES HERE
+![Screen shot of delete appointments page.](static/images/delete-appointment.png)
 
 - Should the user wish to view the blog post section once logged in they will now see they are able to submit a comment and like posts by clicking on the heart icon.
 
-LOGGED IN BLOG POST GOES HERE
+![Screen shot of logged in user blog comments.](static/images/logged-in-blog-page.png)
+
+- When the user decideds to sign out they will be redirected to the sign-out page where they will be asked if their sure they would like to sign out.
+
+![Screen shot of sign out page.](static/images/sign-out.png)
 
 ## Features left to add
 
@@ -124,13 +129,13 @@ LOGGED IN BLOG POST GOES HERE
 ## Testing
 
 - W3C HTML Validator  
-IMAGE OF HTML CHECKER GOES HERE
+![Screen shot of html validator](static/images/html-checker.png)
 
 - W3C CSS Validator
-IMAGE OF CSS CHECKER GOES HERE
+![Screen shot of css validator](static/images/css-checker.png)
 
 - PEP8 Validator
-IMAGE OF PEP8 GOES HERE
+![Screen shot of pep8 validator](static/images/pep8-checker.png)
 
 - LIGHTHOUSE PERFORMANCE
 - IMAGE GOES HERE
@@ -194,7 +199,7 @@ Solved bugs
 
 Whilst checking my code in the html validator there were a number of errors showing, Oisin from tutor support helped identify the issue which was I had an extra </table tag in the code which caused all these errors to show in the validator
 
-VALIDATOR ERRORS IMAGE GOES HERE
+![Screen shot of html  validator errors.](static/images/html-errors.png)
 
 ## Unfixed bugs
 
@@ -306,16 +311,16 @@ In the terminal of your new work space you will need to install the following.
   
 - Blog section and registration content came from Code Institutes 'I think therefore I blog' walkthrough this was used as a base for my project.
 - Additional content was created using Bootstrap to which I made some changes to the content that it supplies.
-- Fonts where taken from google fonts
-- Images where take from Unsplash.com
-- Icons were taken from fontawesome
+- Fonts where taken from [google fonts](https://fonts.google.com/)
+- Images where take from [Unsplash](https://unsplash.com/s/photos/barber-shop)
+- Icons were taken from [fontawesome](https://fontawesome.com/)
 
 ## Credits
 
 - I used both walkthrough projects created by Code Institute to help me create this project
   - "I think therefor I blog" I created authentication and the blog section based on this walkthrough project.
   - "Hello Django" I created my CRUD functionalities based on this walkthrough project.
-  - I got inspiration for me model from WEBSITE LINK GOES HERE
+  - I got inspiration for me model from [Doctors booking model](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
 
 ## Acknowledgements
 
