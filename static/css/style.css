@@ -20,7 +20,7 @@ body {
         linear-gradient(to right,
         rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0.0)),
-        url(../images/main-image.jpg);
+        url(https: //res.cloudinary.com/dsf3dnd2w/image/upload/v1701287899/static/images/main-image.54e6ebd07b74.jpg);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
