@@ -15,11 +15,16 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Iterating througha list of appointments -->
             {% for appointment in appointment %}
             <tr>
+                <!-- Displaying the username of the appointment user -->
                 <td>{{ appointment.user.username }}</td>
+                <!-- Displaying the type of service for the appointment -->
                 <td>{{ appointment.service }}</td>
+                <!-- Displaying the date of the appointment -->
                 <td>{{ appointment.date }}</td>
+                <!-- Displaying the time of the appointment -->
                 <td>{{ appointment.time }}</td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">

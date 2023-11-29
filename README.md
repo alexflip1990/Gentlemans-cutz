@@ -1,11 +1,16 @@
 # Project 4: Gentlemans-Cutz barber booking system
 
-RESPONSIVE IMAGE GOES HERE
+Unfortunately Am I Responsive could not connect to Heroku at the time,I had spoken to tutor assist who recomended doing screen shots of the website
+on different devices which I have included below
+![Screen shot of Ipad Air](static/images/ipad-air.png)
+![Screen shot of Iphone SE](static/images/iphone-se.png)
+![Screen shot of Nest Hub Max](static/images/nest-hub-max.png)
+![Screen shot of Nest Hub](static/images/nest-hub.png)
 
 ## Introduction
 
  This website Gentlemanz-Cutz is a fictional barbershop website where users have the ability to create an account, sign in, make an appointment and view, edit or delete their appointments that they have made, view the blog post section and comment on the blog posts. Only users who have registered to the site will be able to book an appointment or comment on a blog post.  Admin users also have the ability to create,edit and delete appointments created by themselves or appointments created by users as well as any comments via the blog posts.
- View Live website here -LINK TO LIVE SITE GOES HERE
+ [View Live website here] -LINK TO LIVE SITE GOES HERE
 
 ## User Experience
 
