@@ -10,7 +10,7 @@ on different devices which I have included below
 ## Introduction
 
  This website Gentlemanz-Cutz is a fictional barbershop website where users have the ability to create an account, sign in, make an appointment and view, edit or delete their appointments that they have made, view the blog post section and comment on the blog posts. Only users who have registered to the site will be able to book an appointment or comment on a blog post.  Admin users also have the ability to create,edit and delete appointments created by themselves or appointments created by users as well as any comments via the blog posts.
- [View Live website here] -LINK TO LIVE SITE GOES HERE
+ [View Live website here](https://gentlemans-cutz-f278215e50b9.herokuapp.com/)
 
 ## User Experience
 
